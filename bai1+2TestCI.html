@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//  bai 1    
+function isprime(A,B){
+    
+    let flag = true;
+
+    if (A <2 || B<2 ) return flag = false; 
+    
+    let i = 2;
+    while(i <A || i<B){
+        if( A%i==0 || B%i==0  ) {
+            flag = false;
+            break;
+        }
+        i++;
+    }
+
+    return flag;
+}
+
+let A = Number(prompt('hãy nhập số A'));
+let B = Number(prompt('hãy nhập số B'));
+
+let i = A, check=0, result ="";
+   while ( i < B){
+    check = isprime(i);
+    if( check == 1 ) result += i + " ";
+    ++i;
+}
+console.log(result); 
+
+// bai 2
+function numberOneTriangle(N) {
+    let N = Number(prompt('hãy nhập số N'));
+    for (let x = 0; x < N; x++){
+        for (let y = 0; y <= x; y++){
+            console.log('*');
+        }
+        console.log(<br/>);
+    }
+
+} 
+</script>
+</html>
